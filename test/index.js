@@ -1,13 +1,14 @@
-var document = global.document || (global.document = {
-  createEvent: function () {
-    return {initEvent: function (type, init) {
-      this.type = type;
-      if (!init) init = {};
-      this.bubbles = !!init.bubbles;
-      this.cancelable = !!init.cancelable;
-    }};
-  }
-});
+if (typeof document === 'undefined')
+  global.document = {
+    createEvent: function () {
+      return {initEvent: function (type, init) {
+        this.type = type;
+        if (!init) init = {};
+        this.bubbles = !!init.bubbles;
+        this.cancelable = !!init.cancelable;
+      }};
+    }
+  };
 
 var Event = require('../cjs');
 test();
