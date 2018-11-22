@@ -22,7 +22,7 @@ function test() {
   var b = new Event('b', {bubbles: true, cancelable: true});
   console.assert(b.type === 'b');
   console.assert(b.cancelable && b.bubbles);
-  return;
+
   var c = new Event('c', {bubbles: true});
   console.assert(c.type === 'c');
   console.assert(!c.cancelable && c.bubbles);
