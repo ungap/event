@@ -1,0 +1,1 @@
+try{new Event("o_O")}catch(o_O){try{Event=CustomEvent.bind(null)}catch(o_O){!function(n){Event=function(e,t){t||(t={});var c=n.createEvent("Event"),b=!!t.bubbles,a=!!t.cancelable;return c.initEvent(e,b,a),c.bubbles=b,c.cancelable=a,c}}(document)}}
