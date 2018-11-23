@@ -3,7 +3,7 @@ var self = this || /* istanbul ignore next */ {};
 try { self.Event = new Event('.').constructor; }
 catch (Event) {
   try {
-    self.Event = CustomEvent.bind(null);
+    self.Event = new CustomEvent('.').constructor;
   } catch (Event) {
     self.Event = function Event(type, init) {
       if (!init)
