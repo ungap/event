@@ -1,22 +1,21 @@
-try {
-  new Event('o_O');
-} catch (o_O) {
+/*! (c) Andrea Giammarchi - ISC */
+var self = this || /* istanbul ignore next */ {};
+try { self.Event = new Event('.').constructor; }
+catch (Event) {
   try {
-    Event = CustomEvent.bind(null);
-  } catch (o_O) {
-    (function (document) {
-      Event = function Event(type, init) {
-        if (!init)
-          init = {};
-        var e = document.createEvent('Event');
-        var bubbles = !!init.bubbles;
-        var cancelable = !!init.cancelable;
-        e.initEvent(type, bubbles, cancelable);
-        e.bubbles = bubbles;
-        e.cancelable = cancelable;
-        return e;
-      };
-    }(document));
+    self.Event = CustomEvent.bind(null);
+  } catch (Event) {
+    self.Event = function Event(type, init) {
+      if (!init)
+        init = {};
+      var e = document.createEvent('Event');
+      var bubbles = !!init.bubbles;
+      var cancelable = !!init.cancelable;
+      e.initEvent(type, bubbles, cancelable);
+      e.bubbles = bubbles;
+      e.cancelable = cancelable;
+      return e;
+    };
   }
 }
-module.exports = Event;
+module.exports = self.Event;
