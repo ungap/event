@@ -5,8 +5,8 @@
 An [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) polyfill for legacy browsers.
 
   * CDN via https://unpkg.com/@ungap/event
-  * ESM via `import WeakSet from '@ungap/event'`
-  * CJS via `const WeakSet = require('@ungap/event')`
+  * ESM via `import Event from '@ungap/event'`
+  * CJS via `const Event = require('@ungap/event')`
 
 Compatible down to IE9, works well with ES5 shim upfront in IE8 (and maybe lower too).
 
