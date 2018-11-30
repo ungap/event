@@ -12,8 +12,10 @@ catch (Event) {
       var bubbles = !!init.bubbles;
       var cancelable = !!init.cancelable;
       e.initEvent(type, bubbles, cancelable);
-      e.bubbles = bubbles;
-      e.cancelable = cancelable;
+      try {
+        e.bubbles = bubbles;
+        e.cancelable = cancelable;
+      } catch (e) {}
       return e;
     };
   }

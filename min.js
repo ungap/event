@@ -1,2 +1,2 @@
 /*! (c) Andrea Giammarchi - ISC */
-var self=this||{};try{self.Event=new Event(".").constructor}catch(Event){try{self.Event=new CustomEvent(".").constructor}catch(Event){self.Event=function(e,t){t||(t={});var n=document.createEvent("Event"),c=!!t.bubbles,v=!!t.cancelable;return n.initEvent(e,c,v),n.bubbles=c,n.cancelable=v,n}}}
+var self=this||{};try{self.Event=new Event(".").constructor}catch(Event){try{self.Event=new CustomEvent(".").constructor}catch(Event){self.Event=function(t,e){e||(e={});var n=document.createEvent("Event"),c=!!e.bubbles,r=!!e.cancelable;n.initEvent(t,c,r);try{n.bubbles=c,n.cancelable=r}catch(n){}return n}}}
